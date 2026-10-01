@@ -1,0 +1,349 @@
+/* ========================================
+   GENERAL STYLES
+   ======================================== */
+
+/* Removes default spacing and makes sizing easier to control */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main body styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f7fb;
+    color: #333333;
+}
+
+/* Makes links look clean */
+a {
+    text-decoration: none;
+}
+
+
+/* ========================================
+   HEADER
+   ======================================== */
+
+header {
+    background-color: #243b6b;
+    color: white;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Portfolio title */
+header h1 {
+    font-size: 28px;
+}
+
+/* Navigation list */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+/* Navigation links */
+nav a {
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Navigation hover effect */
+nav a:hover {
+    color: #a9d6ff;
+}
+
+
+/* ========================================
+   MAIN CONTENT
+   ======================================== */
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+/* All sections */
+section {
+    background-color: white;
+    padding: 35px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Section headings */
+section h2 {
+    color: #243b6b;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+
+/* ========================================
+   ABOUT SECTION
+   ======================================== */
+
+#about {
+    text-align: center;
+}
+
+/* Profile image */
+#about img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #243b6b;
+    margin: 20px auto;
+}
+
+/* About paragraph */
+#about p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+
+/* ========================================
+   SKILLS SECTION
+   ======================================== */
+
+#skills dl {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 15px;
+}
+
+/* Skill names */
+#skills dt {
+    font-weight: bold;
+    color: #243b6b;
+}
+
+/* Skill descriptions */
+#skills dd {
+    margin: 0;
+}
+
+
+/* ========================================
+   PROJECTS SECTION
+   ======================================== */
+
+#projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* Projects heading takes full width */
+#projects h2 {
+    grid-column: 1 / -1;
+}
+
+/* Individual project cards */
+#projects article {
+    background-color: #eef4ff;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #243b6b;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Project card hover effect */
+#projects article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* Project title */
+#projects h3 {
+    color: #243b6b;
+    margin-bottom: 12px;
+}
+
+/* Project links */
+#projects article a {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #243b6b;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+/* Project link hover */
+#projects article a:hover {
+    background-color: #16294d;
+}
+
+
+/* ========================================
+   CONTACT FORM
+   ======================================== */
+
+form {
+    max-width: 700px;
+    margin: auto;
+}
+
+/* Form paragraphs */
+form p {
+    margin-bottom: 18px;
+}
+
+/* Form labels */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #243b6b;
+}
+
+/* Input and textarea */
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+/* Input focus effect */
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #243b6b;
+    box-shadow: 0 0 5px rgba(36, 59, 107, 0.25);
+}
+
+/* Submit button */
+button {
+    background-color: #243b6b;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #16294d;
+}
+
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+    background-color: #243b6b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablet and mobile devices */
+@media (max-width: 768px) {
+
+    /* Header becomes vertical */
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* Navigation becomes vertical */
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    /* Main content uses more screen width */
+    main {
+        width: 95%;
+        margin: 25px auto;
+    }
+
+    /* Sections have less padding */
+    section {
+        padding: 25px;
+    }
+
+    /* Skills list becomes one column */
+    #skills dl {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    /* Projects become one column */
+    #projects {
+        grid-template-columns: 1fr;
+    }
+
+    /* Project heading remains at the top */
+    #projects h2 {
+        grid-column: auto;
+    }
+
+    /* Smaller profile image on mobile */
+    #about img {
+        width: 160px;
+        height: 160px;
+    }
+
+    /* Smaller main heading */
+    header h1 {
+        font-size: 23px;
+    }
+}
+
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+
+    section {
+        padding: 20px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    #about img {
+        width: 140px;
+        height: 140px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+}
